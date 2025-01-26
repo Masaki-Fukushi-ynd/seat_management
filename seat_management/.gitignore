@@ -1,0 +1,37 @@
+# See https://help.github.com/articles/ignoring-files for more about ignoring files.
+
+# Logs
+/log/*
+/tmp/*
+
+# Ignore all DB files and database configuration
+*.sqlite3
+*.sqlite3-journal
+/config/database.yml
+
+# Ignore environment variables
+/.env
+/.env.*
+/config/secrets.yml
+
+# Ignore Byebug command history file.
+.byebug_history
+
+# Ignore Rails master key
+/config/credentials.yml.enc
+/config/master.key
+
+# Ignore node_modules
+/node_modules
+
+# Ignore Yarn lock file
+/yarn.lock
+
+# Ignore the default uploaded files directory
+/public/uploads
+
+# Ignore the assets folder if you're not using the asset pipeline or compiling assets
+/public/assets
+
+# Ignore any other files you don't want to push to GitHub
+.DS_Store
