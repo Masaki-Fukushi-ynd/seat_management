@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>座席情報</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>テーブル番号</th>
+                <th>シート番号</th>
+                <th>状態</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @seats.each do |seat| %>
+            <tr id="seat-<%= seat.identifier %>">
+                <td><%= seat.identifier %></td>
+                <td><%= seat.table_number %></td>
+                <td><%= seat.seat_number %></td>
+                <td><%= seat.is_occupied ? '満席' : '空席' %></td> <!-- 状態をtrue/falseで表示 -->
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+</body>
+</html>
